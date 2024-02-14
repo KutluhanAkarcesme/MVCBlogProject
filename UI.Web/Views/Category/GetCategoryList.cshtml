@@ -1,5 +1,6 @@
 ﻿@using EntityLayer.Concrete
 @model List<Category>
+
 @{
     Layout = null;
 }
@@ -24,5 +25,6 @@
             <th>@item.CategoryStatus</th>
         </tr>
     }
-
 </table>
+<br />
+<a href="/Category/AddCategory" class="btn btn-info">Yeni Kayıt</a>

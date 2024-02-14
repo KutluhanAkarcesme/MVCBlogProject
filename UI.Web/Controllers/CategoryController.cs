@@ -1,4 +1,6 @@
 ﻿using BusinessLayer.Concrete;
+using DataAccessLayer.Abstract;
+using DataAccessLayer.EntityFramework;
 using EntityLayer.Concrete;
 using System;
 using System.Collections.Generic;
@@ -10,7 +12,7 @@ namespace UI.Web.Controllers
 {
     public class CategoryController : Controller
     {
-        CategoryManager categoryManager = new CategoryManager();
+        CategoryManager categoryManager = new CategoryManager(new EFCategoryDal());
         // GET: Category
         public ActionResult Index()
         {
@@ -19,20 +21,20 @@ namespace UI.Web.Controllers
 
         public ActionResult GetCategoryList()
         {
-            var categoryValues = categoryManager.GetAll();
+            var categoryValues = categoryManager.GetList();
             return View(categoryValues);
         }
 
         [HttpGet]
-        public ActionResult AddCategory() 
+        public ActionResult AddCategory()
         {
             return View();
         }
-        
+
         [HttpPost]
         public ActionResult AddCategory(Category category)
         {
-            categoryManager.CategoryAdd(category);
+            categoryManager.Add(category);
             return RedirectToAction("GetCategoryList");
         }
     }
