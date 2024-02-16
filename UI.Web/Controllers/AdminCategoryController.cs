@@ -61,5 +61,12 @@ namespace UI.Web.Controllers
             var result = categoryManager.GetById(id);
             return View(result);
         }
+
+        [HttpPost]
+        public ActionResult EditCategory(Category category)
+        {
+            categoryManager.Update(category);
+            return RedirectToAction("Index");
+        }
     }
 }

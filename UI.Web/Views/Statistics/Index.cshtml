@@ -1,0 +1,24 @@
+﻿@model UI.Web.Models.StatisticsModel
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_AdminLayout.cshtml";
+}
+<br />
+<table class="table table-bordered">
+    <tr>
+        <th>Toplam Kategori Sayısı</th>
+        <th>Yazılım Kategorisine Ait Başlık Sayısı</th>
+        <th>Yazar Adında 'a' Harfi Geçen Yazar Sayısı</th>
+        <th>En Fazla Başlığa Sahip Kategori Adı</th>
+        <th>Kategori Tablosunda Durumu True Olan Kategoriler ile False Olan Kategoriler Arasındaki Sayısal Fark</th>
+    </tr>
+    <tr>
+        <th>@Model.getCategoryCount</th>
+        <th>@Model.getHeadingCountBySoftware</th>
+        <th>@Model.getWriterByFilter</th>
+        <th>@Model.getMaxHeadingCategory</th>
+        <th>@Model.getStatusDifference</th>
+    </tr>
+
+</table>
+
