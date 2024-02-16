@@ -11,7 +11,8 @@ namespace DataAccessLayer.Abstract
     public interface IRepository<T> where T : class
     {
         List<T> GetList();
-        List<T> GetFilter(Expression<Func<T, bool>> filter);
+        T GetById(Expression<Func<T, bool>> filter);
+        List<T> GetListByFilter(Expression<Func<T, bool>> filter);
         void Add(T entity);
         void Update(T entity);
         void Delete(T entity);

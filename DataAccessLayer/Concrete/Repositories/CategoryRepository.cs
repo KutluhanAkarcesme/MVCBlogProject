@@ -21,12 +21,22 @@ namespace DataAccessLayer.Concrete.Repositories
             throw new NotImplementedException();
         }
 
+        public Category GetById(Expression<Func<Category, bool>> filter)
+        {
+            throw new NotImplementedException();
+        }
+
         public List<Category> GetFilter(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
         }
 
         public List<Category> GetList()
+        {
+            throw new NotImplementedException();
+        }
+
+        public List<Category> GetListByFilter(Expression<Func<Category, bool>> filter)
         {
             throw new NotImplementedException();
         }

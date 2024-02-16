@@ -41,6 +41,11 @@ namespace BusinessLayer.Concrete
             _categgoryDal.Delete(category);
         }
 
+        public Category GetById(int id)
+        {
+            return _categgoryDal.GetById(x => x.CategoryId == id);
+        }
+
         public List<Category> GetList()
         {
             return _categgoryDal.GetList();

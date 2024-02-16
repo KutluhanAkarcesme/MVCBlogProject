@@ -30,19 +30,24 @@ namespace DataAccessLayer.Concrete.Repositories
             context.SaveChanges();
         }
 
-        public List<T> GetFilter(Expression<Func<T, bool>> filter)
-        {
-            return _object.Where(filter).ToList();  
-        }
-
         public List<T> GetList()
         {
             return _object.ToList();
         }
 
+        public List<T> GetListByFilter(Expression<Func<T, bool>> filter)
+        {
+            return _object.Where(filter).ToList();
+        }
+
         public void Update(T entity)
         {
             context.SaveChanges();
+        }
+
+        T IRepository<T>.GetById(Expression<Func<T, bool>> filter)
+        {
+            return _object.Where(filter).SingleOrDefault();
         }
     }
 }
