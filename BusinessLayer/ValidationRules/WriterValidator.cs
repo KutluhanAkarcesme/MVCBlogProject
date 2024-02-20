@@ -17,6 +17,7 @@ namespace BusinessLayer.ValidationRules
             RuleFor(x => x.WriterAbout).MinimumLength(3).WithMessage("Hakkımda Kısmı Boş Bırakılamaz");
             RuleFor(x => x.WriterSurName).MinimumLength(2).WithMessage("Yazar Soyadı En Az 2 Karakter Olmalıdır");
             RuleFor(x => x.WriterSurName).MaximumLength(50).WithMessage("Yazar  Soyadı En Fazla 50 Karakter Olmalıdır");
+            RuleFor(x => x.WriterTitle).NotEmpty().WithMessage("Unvan Kısmını Boş Bırakamazsınız");
         }
     }
 }

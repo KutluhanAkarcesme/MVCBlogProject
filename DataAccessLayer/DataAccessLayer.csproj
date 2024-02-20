@@ -71,6 +71,10 @@
     <Compile Include="Migrations\202402191818167_edit-writer-table.Designer.cs">
       <DependentUpon>202402191818167_edit-writer-table.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202402191903007_WriterTitleAddedWriterTable.cs" />
+    <Compile Include="Migrations\202402191903007_WriterTitleAddedWriterTable.Designer.cs">
+      <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -87,6 +91,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\202402191818167_edit-writer-table.resx">
       <DependentUpon>202402191818167_edit-writer-table.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202402191903007_WriterTitleAddedWriterTable.resx">
+      <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
