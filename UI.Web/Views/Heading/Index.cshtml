@@ -7,4 +7,21 @@
 <h2>Index</h2>
 <br />
 
+<table class="table table-bordered">
+    <tr>
+        <th>ID</th>
+        <th>Başlık</th>
+        <th>Kategori</th>
+    </tr>
+    @foreach (var item in Model)
+    {
+        <tr>
+            <th>@item.HeadingId</th>
+            <th>@item.HeadingName</th>
+            <th>@item.CategoryId</th>
+        </tr>
+    }
+</table>
+<br />
+<a href="/Heading/AddHeading" class="btn btn-info">Yeni Başlık Girişi</a>
 
