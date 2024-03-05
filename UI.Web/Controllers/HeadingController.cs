@@ -13,6 +13,7 @@ namespace UI.Web.Controllers
     {
         HeadingManager headingManager = new HeadingManager(new EFHeadingDal());
         CategoryManager categoryManager = new CategoryManager(new EFCategoryDal());
+        WriterManager writerManager = new WriterManager(new EFWriterDal());
         public ActionResult Index()
         {
             var headingValues = headingManager.GetList();
@@ -28,7 +29,15 @@ namespace UI.Web.Controllers
                                                        Text = x.CategoryName,
                                                        Value = x.CategoryId.ToString()
                                                    }).ToList();
+            List<SelectListItem> writerValues = (from x in writerManager.GetList()
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.WriterName + " " + x.WriterSurName,
+                                                       Value = x.WriterId.ToString()
+                                                   }).ToList();
+
             ViewBag.vlc = categoryValues;
+            ViewBag.vlw = writerValues;
             return View();
         }
 
