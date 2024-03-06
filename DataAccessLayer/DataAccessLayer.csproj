@@ -75,6 +75,14 @@
     <Compile Include="Migrations\202402191903007_WriterTitleAddedWriterTable.Designer.cs">
       <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403061035548_writerImageSizeChange.cs" />
+    <Compile Include="Migrations\202403061035548_writerImageSizeChange.designer.cs">
+      <DependentUpon>202403061035548_writerImageSizeChange.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\202403061054466_createdWriterStatusColumn.cs" />
+    <Compile Include="Migrations\202403061054466_createdWriterStatusColumn.designer.cs">
+      <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -94,6 +102,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202402191903007_WriterTitleAddedWriterTable.resx">
       <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403061035548_writerImageSizeChange.resx">
+      <DependentUpon>202403061035548_writerImageSizeChange.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403061054466_createdWriterStatusColumn.resx">
+      <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

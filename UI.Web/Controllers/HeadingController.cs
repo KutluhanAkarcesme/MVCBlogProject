@@ -49,5 +49,10 @@ namespace UI.Web.Controllers
 
             return RedirectToAction("Index");
         }
+
+        public ActionResult ContentByHeading()
+        {
+            return View();
+        }
     }
 }
