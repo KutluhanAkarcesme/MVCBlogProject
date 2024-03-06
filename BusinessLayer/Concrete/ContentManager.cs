@@ -37,14 +37,14 @@ namespace BusinessLayer.Concrete
             return _contentDal.GetList();
         }
 
-        public List<Content> GetListById(int id)
+        public List<Content> GetListByHeadingId(int id)
         {
             return _contentDal.GetListByFilter(x => x.HeadingId == id);
         }
 
         public void Update(Content content)
         {
-             _contentDal.Update(content);
+            _contentDal.Update(content);
         }
     }
 }

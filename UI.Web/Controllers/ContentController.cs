@@ -1,4 +1,7 @@
-﻿using System;
+﻿using BusinessLayer.Abstract;
+using BusinessLayer.Concrete;
+using DataAccessLayer.EntityFramework;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -8,14 +11,16 @@ namespace UI.Web.Controllers
 {
     public class ContentController : Controller
     {
+        ContentManager contentManager = new ContentManager(new EFContentDal());
         public ActionResult Index()
         {
             return View();
         }
 
-        public ActionResult ContentByHeading()
+        public ActionResult ContentByHeading(int id)
         {
-            return View();
+            var contentValues = contentManager.GetListByHeadingId(id);
+            return View(contentValues);
         }
     }
 }
