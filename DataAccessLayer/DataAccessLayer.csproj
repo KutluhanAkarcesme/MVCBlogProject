@@ -83,6 +83,10 @@
     <Compile Include="Migrations\202403061054466_createdWriterStatusColumn.designer.cs">
       <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202403261120389_CreatedStatusColumn.cs" />
+    <Compile Include="Migrations\202403261120389_CreatedStatusColumn.designer.cs">
+      <DependentUpon>202403261120389_CreatedStatusColumn.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,6 +112,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202403061054466_createdWriterStatusColumn.resx">
       <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202403261120389_CreatedStatusColumn.resx">
+      <DependentUpon>202403261120389_CreatedStatusColumn.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

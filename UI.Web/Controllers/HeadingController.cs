@@ -29,12 +29,13 @@ namespace UI.Web.Controllers
                                                        Text = x.CategoryName,
                                                        Value = x.CategoryId.ToString()
                                                    }).ToList();
+
             List<SelectListItem> writerValues = (from x in writerManager.GetList()
-                                                   select new SelectListItem
-                                                   {
-                                                       Text = x.WriterName + " " + x.WriterSurName,
-                                                       Value = x.WriterId.ToString()
-                                                   }).ToList();
+                                                 select new SelectListItem
+                                                 {
+                                                     Text = x.WriterName + " " + x.WriterSurName,
+                                                     Value = x.WriterId.ToString()
+                                                 }).ToList();
 
             ViewBag.vlc = categoryValues;
             ViewBag.vlw = writerValues;
@@ -50,9 +51,21 @@ namespace UI.Web.Controllers
             return RedirectToAction("Index");
         }
 
-        public ActionResult ContentByHeading()
+        [HttpGet]
+        public ActionResult EditHeading(int id)
         {
-            return View();
+            List<SelectListItem> categoryValues = (from x in categoryManager.GetList()
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.CategoryName,
+                                                       Value = x.CategoryId.ToString()
+                                                   }).ToList();
+            ViewBag.vlc = categoryValues;
+            var headingValue = headingManager.GetById(id);
+
+            return View(headingValue);
         }
+
+
     }
 }
