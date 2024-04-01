@@ -66,6 +66,13 @@ namespace UI.Web.Controllers
             return View(headingValue);
         }
 
+        [HttpPost]
+        public ActionResult EditHeading(Heading heading)
+        {
+            headingManager.Update(heading);
+
+            return RedirectToAction("Index");
+        }
 
     }
 }
