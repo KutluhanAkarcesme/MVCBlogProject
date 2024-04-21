@@ -60,7 +60,15 @@ namespace UI.Web.Controllers
                                                        Text = x.CategoryName,
                                                        Value = x.CategoryId.ToString()
                                                    }).ToList();
+
+            List<SelectListItem> writerValues = (from x in writerManager.GetList()
+                                                   select new SelectListItem
+                                                   {
+                                                       Text = x.WriterName + " " + x.WriterSurName,
+                                                       Value = x.WriterId.ToString()
+                                                   }).ToList();
             ViewBag.vlc = categoryValues;
+            ViewBag.vlw = writerValues;
             var headingValue = headingManager.GetById(id);
 
             return View(headingValue);
@@ -74,5 +82,12 @@ namespace UI.Web.Controllers
             return RedirectToAction("Index");
         }
 
+        //[HttpDelete]
+        public ActionResult DeleteHeading(int id)
+        {
+            var headingValue = headingManager.GetById(id);
+            headingManager.Delete(headingValue);
+            return RedirectToAction("Index");
+        }
     }
 }
