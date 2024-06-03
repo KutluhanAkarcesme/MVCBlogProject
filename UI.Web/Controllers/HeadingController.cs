@@ -86,6 +86,7 @@ namespace UI.Web.Controllers
         public ActionResult DeleteHeading(int id)
         {
             var headingValue = headingManager.GetById(id);
+            headingValue.Status = false;
             headingManager.Delete(headingValue);
             return RedirectToAction("Index");
         }
