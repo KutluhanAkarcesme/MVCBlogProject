@@ -67,34 +67,6 @@
     <Compile Include="EntityFramework\EFContentDal.cs" />
     <Compile Include="EntityFramework\EFHeadingDal.cs" />
     <Compile Include="EntityFramework\EFWriterDal.cs" />
-    <Compile Include="Migrations\202402191818167_edit-writer-table.cs" />
-    <Compile Include="Migrations\202402191818167_edit-writer-table.Designer.cs">
-      <DependentUpon>202402191818167_edit-writer-table.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202402191903007_WriterTitleAddedWriterTable.cs" />
-    <Compile Include="Migrations\202402191903007_WriterTitleAddedWriterTable.Designer.cs">
-      <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403061035548_writerImageSizeChange.cs" />
-    <Compile Include="Migrations\202403061035548_writerImageSizeChange.designer.cs">
-      <DependentUpon>202403061035548_writerImageSizeChange.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403061054466_createdWriterStatusColumn.cs" />
-    <Compile Include="Migrations\202403061054466_createdWriterStatusColumn.designer.cs">
-      <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202403261120389_CreatedStatusColumn.cs" />
-    <Compile Include="Migrations\202403261120389_CreatedStatusColumn.designer.cs">
-      <DependentUpon>202403261120389_CreatedStatusColumn.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202406030716168_EditAboutIdValueType.cs" />
-    <Compile Include="Migrations\202406030716168_EditAboutIdValueType.Designer.cs">
-      <DependentUpon>202406030716168_EditAboutIdValueType.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Migrations\202406050724414_CreatedAbout.cs" />
-    <Compile Include="Migrations\202406050724414_CreatedAbout.Designer.cs">
-      <DependentUpon>202406050724414_CreatedAbout.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -108,29 +80,7 @@
       <Name>EntityLayer</Name>
     </ProjectReference>
   </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\202402191818167_edit-writer-table.resx">
-      <DependentUpon>202402191818167_edit-writer-table.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202402191903007_WriterTitleAddedWriterTable.resx">
-      <DependentUpon>202402191903007_WriterTitleAddedWriterTable.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403061035548_writerImageSizeChange.resx">
-      <DependentUpon>202403061035548_writerImageSizeChange.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403061054466_createdWriterStatusColumn.resx">
-      <DependentUpon>202403061054466_createdWriterStatusColumn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202403261120389_CreatedStatusColumn.resx">
-      <DependentUpon>202403261120389_CreatedStatusColumn.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202406030716168_EditAboutIdValueType.resx">
-      <DependentUpon>202406030716168_EditAboutIdValueType.cs</DependentUpon>
-    </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\202406050724414_CreatedAbout.resx">
-      <DependentUpon>202406050724414_CreatedAbout.cs</DependentUpon>
-    </EmbeddedResource>
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
     <PropertyGroup>

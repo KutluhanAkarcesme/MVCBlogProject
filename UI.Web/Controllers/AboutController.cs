@@ -15,7 +15,7 @@ namespace UI.Web.Controllers
         public ActionResult Index()
         {
             var aboutValues = aboutManager.GetList();
-            return View();
+            return View(aboutValues);
         }
         [HttpGet]
         public ActionResult AddAbout()
