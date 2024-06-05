@@ -91,6 +91,10 @@
     <Compile Include="Migrations\202406030716168_EditAboutIdValueType.Designer.cs">
       <DependentUpon>202406030716168_EditAboutIdValueType.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\202406050724414_CreatedAbout.cs" />
+    <Compile Include="Migrations\202406050724414_CreatedAbout.Designer.cs">
+      <DependentUpon>202406050724414_CreatedAbout.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -122,6 +126,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\202406030716168_EditAboutIdValueType.resx">
       <DependentUpon>202406030716168_EditAboutIdValueType.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\202406050724414_CreatedAbout.resx">
+      <DependentUpon>202406050724414_CreatedAbout.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
