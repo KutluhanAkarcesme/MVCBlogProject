@@ -14,7 +14,7 @@ namespace UI.Web.Controllers
         AboutManager aboutManager = new AboutManager(new EFAboutDal());
         public ActionResult Index()
         {
-            var aboutValues = aboutManager.GetList();
+            List<About> aboutValues = aboutManager.GetList();
             return View(aboutValues);
         }
         [HttpGet]
